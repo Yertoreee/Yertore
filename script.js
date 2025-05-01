@@ -1,3 +1,27 @@
+
+// Инициализация Swiper
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+    }
+});
+
 // Обработка отправки формы
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
