@@ -1,4 +1,3 @@
-
 // Обработка отправки формы
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
