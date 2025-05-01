@@ -1,12 +1,82 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркетолог | Анна Петрова</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <script src="script.js"></script>
+    <nav>
+        <div class="container">
+            <div class="logo">АП</div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О себе</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Анна Петрова</h1>
+            <h2>Маркетолог-стратег с 5-летним опытом</h2>
+            <p>Помогаю бизнесу расти через эффективные маркетинговые стратегии</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>О себе</h2>
+            <div class="about-content">
+                <img src="https://placekitten.com/300/300" alt="Анна Петрова" class="profile-photo">
+                <div>
+                    <p>Привет! Я Анна, маркетолог с страстью к созданию успешных брендов. За 5 лет работы я помогла более 50 компаниям увеличить их присутствие на рынке и привлечь новых клиентов.</p>
+                    <p>Мой подход основан на data-driven маркетинге и глубоком понимании потребностей клиента.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Маркетинговая стратегия</h3>
+                    <p>Разработка комплексной стратегии продвижения вашего бренда</p>
+                    <span class="price">от 50 000 ₽</span>
+                </div>
+                <div class="service-card">
+                    <h3>SMM-продвижение</h3>
+                    <p>Ведение социальных сетей и создание контент-плана</p>
+                    <span class="price">от 30 000 ₽/мес</span>
+                </div>
+                <div class="service-card">
+                    <h3>Аудит маркетинга</h3>
+                    <p>Анализ текущей маркетинговой стратегии и рекомендации</p>
+                    <span class="price">от 20 000 ₽</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Свяжитесь со мной</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
