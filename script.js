@@ -39,11 +39,60 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 });
 
 // Плавная прокрутка к секциям
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Используем делегирование событий для оптимизации
+document.addEventListener('click', function(e) {
+    if (e.target.matches('a[href^="#"]')) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const targetId = e.target.getAttribute('href');
+        document.querySelector(targetId)?.scrollIntoView({
             behavior: 'smooth'
         });
-    });
+    }
 });
+
+// Добавляем debounce для оптимизации производительности при скролле
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Оптимизация загрузки Swiper
+document.addEventListener('DOMContentLoaded', () => {
+    const swiperContainer = document.querySelector('.swiper');
+    if (swiperContainer) {
+        initSwiper();
+    }
+});
+
+function initSwiper() {
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        preloadImages: false,
+        lazy: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
+    });
+}
