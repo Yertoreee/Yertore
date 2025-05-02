@@ -334,6 +334,14 @@ footer {
     color: var(--accent-color);
 }
 
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
 /* Достижения */
 .achievements-grid {
     display: grid;
