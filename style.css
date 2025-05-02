@@ -342,6 +342,25 @@ footer {
     margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+    .testimonial-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .testimonial-author {
+        margin-top: 15px;
+    }
+    
+    .testimonial-content p {
+        font-size: 14px;
+    }
+}
+
 /* Достижения */
 .achievements-grid {
     display: grid;
