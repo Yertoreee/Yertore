@@ -247,10 +247,17 @@ footer {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
+    display: flex;
+    align-items: center;
 }
 
 .social-link:hover {
     color: var(--accent-color);
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
 }
 
 .footer-bottom {
