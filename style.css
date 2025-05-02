@@ -146,15 +146,37 @@ section {
 }
 
 .service-card {
-    padding: 30px;
+    padding: 0;
     background: var(--card-bg);
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s;
-    height: 250px;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    overflow: hidden;
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card h3,
+.service-card p,
+.service-card .price {
+    padding: 0 20px;
+}
+
+.service-card h3 {
+    margin-top: 20px;
+}
+
+.service-card .price {
+    margin-top: auto;
+    padding-bottom: 20px;
 }
 
 .service-card:hover {
